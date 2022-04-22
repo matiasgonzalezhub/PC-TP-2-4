@@ -37,13 +37,9 @@ def crearAnimacion(a, b, char):
 #crearAnimacion(10,30, 'Y')
 #crearAnimacion(10,50, 'Z')
 
-t1=threading.Thread(target=crearAnimacion(10,10, 'X'))
-t2=threading.Thread(target=crearAnimacion(10,30, 'Y'))
-t3=threading.Thread(target=crearAnimacion(10,50, 'Z'))
-
-t1.start()
-t2.start()
-t3.start()
+t1=threading.Thread(target=crearAnimacion,args=(10,10, 'X')).start()
+t2=threading.Thread(target=crearAnimacion , args=(10,30, 'Y')).start()
+t3=threading.Thread(target=crearAnimacion, args=(10,50, 'Z')).start()
 
 # Mantener las siguientes líneas siempre al final del script y en el mismo orden.
 #Coloca la opcion "Salir"
